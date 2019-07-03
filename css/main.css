@@ -106,8 +106,7 @@ body {
     justify-content: center;
     align-items: center; }
     .inner.p .row > div:last-child img {
-      width: 100%;
-      max-width: 320px; }
+      width: 100%; }
 
 p {
   font-size: 36px;
@@ -200,6 +199,21 @@ ul.like {
 
 .inner_table table tr:nth-child(2) th {
   text-align: center; }
+
+.p_3 .row img {
+  max-width: 520px; }
+
+.p_4 .row img {
+  max-width: 420px; }
+
+.p_5 .row img {
+  max-width: 320px; }
+
+.p_6 .row img {
+  max-width: 320px; }
+
+.p_7 .row img {
+  max-width: 300px; }
 
 @media screen and (max-width: 920px) {
   ul, ul.y {
