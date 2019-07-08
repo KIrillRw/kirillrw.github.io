@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="/app/css/main.css">
 	<script src="/app/libs/jquery/jquery.min.js"></script>
 	<script src="/app/libs/fancybox/jquery.fancybox.min.js"></script>
+	<script src="/app/libs/parallax/parallax.min.js"></script>
 	<script src="/app/js/script.js"></script>
 </head>
 <body>
@@ -20,9 +21,7 @@
 	<div>Портфолио WEB разработчика</div>
 </div>
 <header>
-
 	<div class="container">
-
 		<div class="row">
 			<div class="col-9">
 				<nav>
@@ -35,13 +34,16 @@
 				</nav>
 			</div>
 			
-			<div class="col-3 right_area"><div class="nav contact" title="пока не написал кто-то еще"><span>Написать</span></div></div>
+			
 			 
 		</div>
 	</div>
 </header>
-<div class="wrapper container">
-	
+<div class="wrapper parallax" data-parallax="scroll" 
+data-image-src="/app/images/bg2_blur2.jpg"
+>
+	<div class="container">
+
 
 <div class="list">
 	<div class="row">
@@ -224,6 +226,7 @@
 	<li>не работаю с modx и joomla. Совсем.</li>
 </ul>
 
+</div>	
 </div>	
 	<script src="/app/libs/bootstrap/js/popper.js"></script>
 	<script src="/app/libs/bootstrap/js/bootstrap.min.js"></script>
