@@ -2,13 +2,13 @@ $(document).ready(function() {
 	function getCookie(name) {var matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));return matches ? decodeURIComponent(matches[1]) : undefined;}
 	var date = new Date(new Date().getTime() + 1000*60*60*24*30);
 	strGET = window.location.search.replace( '?', ''); 
-	if(strGET=='m=y'){
+	if(strGET=='m=N'){
 		$('.right_area').addClass('active_mail');
-		document.cookie = "m=Y; path=/; expires=" + date.toUTCString();
+		document.cookie = "m=N; path=/; expires=" + date.toUTCString();
 	}
-	if(getCookie('m') == "Y")
+	if(getCookie('m') == "N")
 	{
-		$('.right_area').addClass('active_mail');
+		$('.right_area').removeClass('active_mail');
 	}
 	$('.container_images').click(function(){
 		
