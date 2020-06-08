@@ -1,0 +1,389 @@
+//$site_color: #E07100
+$site_color: #3d8a55
+
+=tr3
+	transition: .3s
+=tr($a)
+	transition: $a
+
+@font-face 
+	font-family: "Font"
+	font-style: normal
+	font-weight: 300
+	src: url("../fonts/Gagalin.eot?#iefix") format("embedded-opentype"),url("../fonts/Gagalin.woff") format("woff"),url("../fonts/Gagalin.ttf") format("truetype") 
+@font-face 
+	font-family: "Font"
+	font-style: italic
+	font-weight: 300
+	src: url("../fonts/italic.eot?#iefix") format("embedded-opentype"),url("../fonts/italic.woff") format("woff"),url("../fonts/italic.ttf") format("truetype") 
+
+body *::selection 
+	background: $site_color
+
+body *::-moz-selection 
+	background: $site_color
+
+body
+	background: #333
+	font-family: "Font", "sans-serif", "Arial"
+	min-width: 320px
+	min-height: 100vh
+	position: relative
+	//background: url('../images/bg2_blur.jpg') center no-repeat
+	background-size: 100% 100%
+	margin: 0
+	padding: 0
+.preroll
+	display: none
+	
+.preroll.first_visit
+	position: fixed
+	top: 0
+	left: 0
+	margin: 0
+	padding: 0
+	width: 100vw
+	height: 100vh
+	min-height: 110vh
+	z-index: 1
+	transition: 2s
+	background: url('../images/bg2.jpg') bottom no-repeat
+	background-size: cover
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	align-items: center
+	div
+		font-size: 70px
+		color: white
+		margin-top: -10vh
+		border: 15px solid white
+		padding: 20px 50px
+		background: #0009
+		border-radius: 10px
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		z-index: 1
+		width: 100px
+		height: 100px
+		margin: auto
+		transition: 1s
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 0
+		transition: 1s
+		background: white url('../images/load.gif') center no-repeat
+		z-index: 2
+		width: 100%
+		height: 100%
+	&.noafter::after,
+	&.noafter::before
+		opacity: 0
+		visibility: hidden
+	&.none
+		opacity: 0
+		visibility: hidden
+	
+.wrapper
+	padding-top: 140px
+	padding-bottom: 50px
+	min-height: 100vh
+	color: white
+	font-size: 30px
+	letter-spacing: 1px
+	text-shadow: 2px 1px 1px #000
+header
+	width: 100%
+	height: 100px
+	background: #414e40
+	position: absolute
+	top: 0
+	&>.container
+		position: relative
+	left: 0
+	box-shadow: 0 2px 14px 5px #000
+	.container, .row
+		height: 100%
+
+	.right_area
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		height: 100%
+		visibility: hidden
+		opacity: 0
+		&.active_mail
+			visibility: visible
+			opacity: 1
+			justify-content: flex-end
+
+nav
+	height: 100%
+	ul
+		list-style: none
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: left
+		align-items: center
+		height: 100%
+		padding: 0
+		margin: 0
+		li
+			height: 100%
+.nav
+	height: 100%
+	border-radius: 5px
+	width: 150px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	text-align: center
+	justify-content: center
+	align-items: flex-end
+	box-sizing: border-box
+	color: transparent
+	transition: .5s
+	cursor: pointer
+	box-shadow:	0 0 20px 0px #000
+	margin: 0 5px
+	background: $site_color center no-repeat
+	border: none
+	& span
+		padding-top: 20px
+		height: 70px
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		opacity: 0
+	&:hover
+		
+		background-size: 40px
+		background-position: center 20px
+		text-decoration: none
+		color: white 
+		transition: .3s
+		font-size: 20px
+		text-shadow: 2px 1px 1px #000
+		line-height: 20px
+		letter-spacing: 1px
+		& span
+			opacity: 1
+	&.portfolio
+		background-image: url('../images/portfolio.svg')
+		background-size: 50px
+		&:hover
+			background-size: 40px
+	&.about
+		background-image: url('../images/about.svg')
+		background-size: 50px
+		&:hover
+			background-size: 40px
+	&.contact
+		background-image: url('../images/mail.svg')
+		background-size: 50px
+		&:hover
+			background-size: 40px
+	&.work
+		background-image: url('../images/work.svg')
+		background-size: 50px
+		&:hover
+			background-size: 40px
+
+a, a:hover
+	color: white
+	text-decoration: none
+	border-bottom: 5px solid $site_color
+
+
+.back
+	font-size: 30px
+	margin-top: 50px
+	display: inline-block
+
+.list
+	margin: 20px 0 40px
+	font-size: 20px
+	.item
+		overflow: hidden
+		display: block
+		box-shadow:	0 0 20px 1px black
+		background: white
+		position: relative
+		height: 350px
+		border-radius: 5px
+		margin-bottom: 30px
+		color: white
+		border-bottom: none
+		transition: .5s
+		&:hover 
+			.inner 
+				opacity: 1
+			img
+				-webkit-filter: blur(5px)
+				-moz-filter: blur(5px)
+				-o-filter: blur(5px)
+				-ms-filter: blur(5px)
+				filter: blur(5px)
+				transform: scale(1.08)
+		.inner
+			position: absolute
+			top: 0 
+			opacity: 0
+			transition: .5s
+			left: 0
+			width: 100%
+			height: 100%
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			height: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			text-align: center
+			background: rgba(40,40,40,.8)
+			.title	
+				font-size: 30px
+				background: $site_color
+				padding: 0 15px
+			.descr
+				margin: 20px 0 0
+				line-height: 22px
+			.more
+				font-size: 20px
+				
+				margin: 20px 0 0
+				border-bottom: 5px solid $site_color
+			
+		img
+			max-width: 100%
+			transition: .5s
+			
+
+.logo
+	
+	margin-top: 25px
+	height: 5px
+	font-size: 35px
+	color: white
+	font-style: italic
+	transform: rotate(-20deg)
+	left: 0px
+	display: block
+	&::before
+		content: "KirillRw"
+		text-shadow: 1px 2px #000
+
+.page_inner
+	.left_side
+		width: 100%
+		max-width: 450px
+		a
+			border: none
+
+		.container_images
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			flex-wrap: wrap
+			margin-left: -5px
+			margin-right: -5px
+			margin-bottom: 20px
+			.img
+				width: 70px
+				height: 70px
+				display: block
+				border-radius: 5px
+				cursor: pointer
+				margin: 10px
+				background-size: cover
+				background-repeat: no-repeat
+				background-position: center
+				+tr3
+				border: 3px solid $site_color
+				&:hover
+					transform: scale(1.1)
+				//img
+				//	width: 100%
+
+
+		img
+			max-width: 100% 
+			margin: 10px 10px 10px 0
+			border-radius: 5px
+.content
+	font-size: 18px	
+
+
+//form
+
+.feedback
+	width: 600px
+	height: 700px
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:920px)
+	.preroll.first_visit div
+		font-size: 24px
+		text-align: center
+		line-height: 28px
+		padding: 20px
+		border: 10px solid white
+	.nav
+		width: 80px
+		height: 60px
+		background-size: 40px !important
+		span
+			font-size: 13px
+			height: 60px
+		&:hover
+			background: $site_color center no-repeat
+	.logo
+		display: none
+	header
+		height: 60px
+	//form
+	.feedback
+		width: 300px
+		height: 800px
+
