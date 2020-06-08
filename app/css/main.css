@@ -98,7 +98,7 @@ body {
 header {
   width: 100%;
   height: 100px;
-  background: #414e40;
+  background: red;
   position: absolute;
   top: 0;
   left: 0;
