@@ -10,19 +10,16 @@ $(document).ready(function() {
 	{
 		$('.right_area').removeClass('active_mail');
 	}
-	$('.container_images').click(function(){
-		
-	});
 	if(getCookie('first_visit') != "Y")
 	{
 		
-		$(window).load(function() {
-			$('.preroll').addClass('noafter');
-			setTimeout(function(){ $('.preroll').addClass('none')}, 3000);
+		// $(window).load(function() {
+		// 	$('.preroll').addClass('noafter');
+		// 	setTimeout(function(){ $('.preroll').addClass('none')}, 3000);
 			
-			document.cookie = "first_visit=Y; path=/; expires=" + date.toUTCString();
+		// 	document.cookie = "first_visit=Y; path=/; expires=" + date.toUTCString();
 		
-		});
+		// });
 
 	}
 	else
